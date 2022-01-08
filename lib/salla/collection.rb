@@ -13,10 +13,10 @@ module Salla
       )
     end
 
-    def initialize(data:, pagination:, :error, :success, :status)
+    def initialize(data:, pagination:, error:, success:, status:)
       @data = data
       @pagination = pagination.empty? ? nil : pagination
-      @status = status
+      @success = success
       @error = error.empty? ? nil : error
       @status = status
     end

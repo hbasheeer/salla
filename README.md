@@ -1,15 +1,13 @@
-# Salla
+# Salla API Rubygem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/salla`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby wrapper for the [Salla](https://salla.sa/site/) API. Currently supports [API v2](https://docs.salla.dev/docs/merchant/ZG9jOjIzMjE3MjMx-get-started).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'salla'
+gem 'salla', github: "hbasheer/salla"
 ```
 
 And then execute:
@@ -22,23 +20,67 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To access the API, you'll need to create a `Salla::Client` and pass in your API key. You can find your API key at [https://s.salla.sa/settings/component/dashboard-api](https://s.salla.sa/settings/component/dashboard-api)
 
-## Development
+```ruby
+client = Salla::Client.new(api_key: ENV["SALLA_API_KEY"])
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+The client then gives you access to each of the resources.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Resources
+
+The gem maps as closely as we can to the Vultr API so you can easily convert API examples to gem code.
+
+Responses are created as objects like `Salla::Account`. Having types like `Salla::User` is handy for understanding what type of object you're working with. They're built using OpenStruct so you can easily access data in a Ruby-ish way.
+
+##### Pagination
+
+`list` endpoints return pages of results. The result object will have a `data` key to access the results, as well as metadata like `pagination` for retrieving the next and previous pages. You may also specify the
+
+```ruby
+results = client.orders.list
+#=> Vultr::Collection
+
+results.pagination
+#=> { "count": 2,
+      "total": 2,
+      "perPage": 15,
+      "currentPage": 1,
+      "totalPages": 1,
+      "links": [] 
+    }
+
+results.data
+#=> [#<Salla::Order>, #<Salla::Order>]
+
+# Retrieve the next page
+client.orders.list(page: 2)
+#=> Salla::Collection
+```
+
+##### Order
+```ruby
+client.orders.list
+client.orders.create({ })
+client.orders.retrieve(order_id: id)
+client.orders.retrieve_histories(order_id: order_id, { })
+```
+
+##### OrderStatus
+```ruby
+client.order_statuses.list
+client.order_statuses.update({ })
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/salla. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/salla/blob/master/CODE_OF_CONDUCT.md).
-
+1. Fork it ( https://github.com/hbasheer/salla/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Salla project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/salla/blob/master/CODE_OF_CONDUCT.md).

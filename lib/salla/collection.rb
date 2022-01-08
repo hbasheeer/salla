@@ -6,6 +6,9 @@ module Salla
       body = response.body
       new(
         data: body[key].map { |attrs| type.new(attrs) },
+        success: body.dig["success"],
+        status: body.dig["status"]
+        error: body.dig["error"],
         pagination: body.dig("pagination")
       )
     end

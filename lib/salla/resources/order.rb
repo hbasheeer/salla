@@ -1,8 +1,8 @@
 module Salla
   class OrderResource < Resource
     def list(**params)
-      Order.new get_request("orders")
-      Collection.from_response(response, key: "orders", type: Order)
+      response = get_request("orders")
+      Collection.from_response(response, key: "data", type: Order)
     end
 
     def create(**attributes)
@@ -11,6 +11,11 @@ module Salla
 
     def retrieve(order_id:)
       Order.new get_request("orders/#{order_id}").body
+    end
+
+    def retrieve_histories(order_id:, **params)
+      response = get_request("orders/#{order_id}/histories")
+      Collection.from_response(response, key: "data", type: OrderHistory)
     end
 
   end

@@ -2,7 +2,7 @@ module Salla
   class OrderStatusResource < Resource
     def list(**params)
       response = get_request("orders/statuses")
-      Collection.from_response(response, key: "data", type: OrderStatus)
+      Collection.from_response(response, type: OrderStatus)
     end
 
     def update(order_id:, **attributes)

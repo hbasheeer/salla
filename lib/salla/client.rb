@@ -16,8 +16,44 @@ module Salla
       OrderResource.new(self)
     end
 
-    def order_status
+    def orders_status
       OrderStatusResource.new(self)
+    end
+
+    def orders_tag
+      OrderTagResource.new(self)
+    end
+
+    def orders_shipment
+      OrderShipmentResource.new(self)
+    end
+
+    def customers
+      CustomerResource.new(self)
+    end
+
+    def cities
+      CityResource.new(self)
+    end
+
+    def countries
+      CountryResource.new(self)
+    end
+
+    def languages
+      LanguageResource.new(self)
+    end
+
+    def branches
+      BranchResource.new(self)
+    end
+
+    def brands
+      BrandResource.new(self)
+    end
+
+    def products
+      ProductResource.new(self)
     end
 
     def connection

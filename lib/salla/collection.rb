@@ -2,10 +2,10 @@ module Salla
   class Collection
     attr_reader :data, :pagination, :status, :error, :success
 
-    def self.from_response(response, key:, type:)
+    def self.from_response(response, type:)
       body = response.body
       new(
-        data: body[key].map { |attrs| type.new(attrs) },
+        data: body["data"].map { |attrs| type.new(attrs) },
         success: body.dig["success"],
         status: body.dig["status"],
         error: body.dig["error"],

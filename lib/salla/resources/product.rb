@@ -1,7 +1,7 @@
 module Salla
   class ProductResource < Resource
     def list(**params)
-      response = get_request("products")
+      response = get_request("products", params: params)
       Collection.from_response(response, type: Product)
     end
 

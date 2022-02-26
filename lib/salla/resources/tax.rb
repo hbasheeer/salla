@@ -1,7 +1,7 @@
 module Salla
   class TaxResource < Resource
     def list(**params)
-      response = get_request("taxes")
+      response = get_request("taxes", params: params)
       Collection.from_response(response, type: Tax)
     end
 

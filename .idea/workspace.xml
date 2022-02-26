@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ed20efa-788e-4c34-af6d-cc9e83dddcf8" name="Changes" comment="Add order &amp; order_status resources">
-      <change afterPath="$PROJECT_DIR$/lib/salla/objects/shop_shipment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/salla/resources/order_shipment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/salla/collection.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/collection.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/branch.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/branch.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/brand.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/brand.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/category.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/city.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/city.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/country.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/country.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/customer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/customer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/customer_group.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/customer_group.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/language.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/language.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/order.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/order.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/order_shipment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/order_shipment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/order_status.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/order_status.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/order_tag.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/order_tag.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/product.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/special_offer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/special_offer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/tax.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/tax.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salla/resources/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salla/resources/user.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +58,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -119,7 +133,7 @@
     </configuration>
     <configuration default="true" type="RackRunConfigurationType" factoryName="Rack">
       <RACK_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RACK_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RACK_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
       <RACK_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RACK_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RACK_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -202,6 +216,8 @@
       <updated>1641644928934</updated>
       <workItem from="1641644931598" duration="10987000" />
       <workItem from="1641659390763" duration="15214000" />
+      <workItem from="1642701098134" duration="1082000" />
+      <workItem from="1645879660054" duration="6270000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1641657121117</created>

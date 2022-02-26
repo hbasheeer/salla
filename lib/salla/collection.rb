@@ -6,18 +6,18 @@ module Salla
       body = response.body
       new(
         data: body["data"].map { |attrs| type.new(attrs) },
-        success: body.dig["success"],
-        status: body.dig["status"],
-        error: body.dig["error"],
+        success: body.dig("success"),
+        status: body.dig("status"),
+        error: body.dig("error"),
         pagination: body.dig("pagination")
       )
     end
 
     def initialize(data:, pagination:, error:, success:, status:)
       @data = data
-      @pagination = pagination.empty? ? nil : pagination
+      @pagination = pagination
       @success = success
-      @error = error.empty? ? nil : error
+      @error = error
       @status = status
     end
   end

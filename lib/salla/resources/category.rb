@@ -1,7 +1,7 @@
 module Salla
   class CategoryResource < Resource
     def list(**params)
-      response = get_request("categories")
+      response = get_request("categories", params: params)
       Collection.from_response(response, type: Category)
     end
 

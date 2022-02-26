@@ -1,7 +1,7 @@
 module Salla
   class BranchResource < Resource
     def list(**params)
-      response = get_request("branches")
+      response = get_request("branches", params: params)
       Collection.from_response(response, type: Branch)
     end
 

@@ -40,7 +40,7 @@ Responses are created as objects like `Salla::Account`. Having types like `Salla
 
 ```ruby
 results = client.orders.list
-#=> Vultr::Collection
+#=> Salla::Collection
 
 results.pagination
 #=> { "count": 2,

@@ -1,7 +1,7 @@
 module Salla
   class CustomerResource < Resource
     def list(**params)
-      response = get_request("customers")
+      response = get_request("customers", params: params)
       Collection.from_response(response, type: Country)
     end
 

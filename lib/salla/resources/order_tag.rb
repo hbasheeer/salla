@@ -1,7 +1,7 @@
 module Salla
   class OrderTagResource < Resource
     def list(**params)
-      response = get_request("orders/tags")
+      response = get_request("orders/tags", params: params)
       Collection.from_response(response, type: OrderTag)
     end
 

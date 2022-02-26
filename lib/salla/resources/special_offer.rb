@@ -1,7 +1,7 @@
 module Salla
   class SpecialOfferResource < Resource
     def list(**params)
-      response = get_request("specialoffers")
+      response = get_request("specialoffers", params: params)
       Collection.from_response(response, type: SpecialOffer)
     end
 

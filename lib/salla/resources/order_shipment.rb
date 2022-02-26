@@ -1,7 +1,7 @@
 module Salla
   class OrderShipmentResource < Resource
     def list(order_id:, **params)
-      response = get_request("/orders/#{order.id}/shipments")
+      response = get_request("/orders/#{order.id}/shipments", params: params)
       Collection.from_response(response, type: OrderShipment)
     end
 

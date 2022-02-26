@@ -1,7 +1,7 @@
 module Salla
   class OrderStatusResource < Resource
     def list(**params)
-      response = get_request("orders/statuses")
+      response = get_request("orders/statuses", params: params)
       Collection.from_response(response, type: OrderStatus)
     end
 
